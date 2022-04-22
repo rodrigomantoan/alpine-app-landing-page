@@ -43,7 +43,7 @@
     <div class="relative overflow-x-hidden md:overflow-y-hidden">
         <!-- navigation -->
         <nav class="w-full py-8 bg-brand-800">
-            <div class="container mx-auto p-4 md:p-0 flex items-center justify-center md:justify-between">
+            <div class="container mx-auto p-4 md:py-0 md:px-8 flex items-center justify-center md:justify-between">
                 <svg width="168" height="30" viewBox="0 0 168 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_3_17805)">
                         <path d="M88.0058 29.9997C88.0058 29.9997 88.002 29.9997 87.9934 29.9997C87.4924 29.9997 71.6439 29.919 73.094 20.9424C73.1035 20.8799 73.114 20.8174 73.1253 20.754C73.1472 20.6349 73.1728 20.5138 73.2013 20.3908C73.2554 20.1583 73.3104 19.9267 73.3664 19.6942C73.4025 19.5462 73.4385 19.3982 73.4755 19.2512C73.5097 19.1147 73.5439 18.9783 73.579 18.8409C73.6122 18.7112 73.6454 18.5815 73.6796 18.4527C73.6805 18.4479 73.6824 18.444 73.6834 18.4392C73.7469 18.1971 73.8124 17.9549 73.8808 17.7138C73.8893 17.6811 73.8978 17.6484 73.9073 17.6158C74.4018 15.8487 74.9873 14.1075 75.7047 12.4221C76.4877 10.5859 77.4737 8.93506 78.6191 7.30827C80.2837 4.94544 82.251 2.35968 84.7535 0.855885C85.7196 0.274546 86.8679 -0.0905927 88.0001 0.0189489C89.1322 -0.0905927 90.2796 0.274546 91.2457 0.855885C93.7482 2.35968 95.7155 4.94544 97.3801 7.30827C98.5255 8.93506 99.5115 10.5859 100.294 12.4221C101.182 14.5044 101.866 16.6722 102.427 18.8697C102.486 19.0974 102.543 19.3261 102.599 19.5548C102.601 19.5596 102.601 19.5644 102.602 19.5692C102.635 19.7019 102.667 19.8345 102.698 19.9671C102.713 20.0276 102.728 20.0872 102.741 20.1477C102.761 20.2284 102.779 20.3101 102.798 20.3908C104.998 29.9161 88.5173 29.9997 88.0058 29.9997Z" fill="url(#paint0_radial_3_17805)" />
@@ -77,33 +77,33 @@
         <!-- endof: navigation -->
 
         <!-- hero -->
-        <div class="bg-gradient-to-b from-brand-800 to-brand-900 py-24">
+        <div class="bg-gradient-to-b from-brand-800 to-brand-900 py-8 sm:py-24">
             <div class="container mx-auto relative">
-                <div class="grid grid-cols-3 px-8 lg:px-0">
-                    <div class="col-span-3 md:col-span-2 flex flex-col gap-12">
-                        <h1 class="text-5xl lg:text-8xl font-bold leading-tight">Sleeping problems?<br />Not anymore!</h1>
-                        <p class="text-lg md:w-8/12">Explore the new king of sleep. It uses sound, visualization and soothing bedtime stories to help you fall into a deep and natural sleep and create perfect conditions for refreshing sleep. </p>
-                        <div class="flex gap-8 md:w-8/12 items-center text-lg">
+                <div class="grid grid-cols-3 px-6 sm:px-2 md:px-8">
+                    <div class="col-span-3 sm:col-span-2 flex flex-col gap-12">
+                        <h1 class="text-5xl lg:text-8xl font-bold leading-tight xl:-mr-12">Sleeping problems?<br />Not anymore!</h1>
+                        <p class="text-lg w-full md:w-10/12 xl:w-8/12">Explore the new king of sleep. It uses sound, visualization and soothing bedtime stories to help you fall into a deep and natural sleep and create perfect conditions for refreshing sleep. </p>
+                        <div class="flex gap-8 w-full md:w-10/12 xl:w-8/12 items-center text-lg">
                             <div>
                                 <a href="#" class="py-4 px-5 bg-brand-400 rounded-lg text-white hover:bg-brand-600 transition duration-300">
                                     Download
                                 </a>
                             </div>
                             <p>
-                                30-day free trial. No credit card needed.
+                                30-day free trial. <span class="block md:inline">No credit card needed.</span>
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- hero-image -->
-                <div class="hidden md:flex">
-                    <img src="/img/hero-image.png" class="absolute inset-x-[55%] -top-1/3 md:-top-24 object-cover">
+                <div class="hidden sm:flex">
+                    <img src="/img/hero-image.png" class="absolute inset-x-1/2 lg:inset-x-[58%] -top-1/4 md:-top-24 object-cover">
                 </div>
                 <!-- endof: hero-image -->
 
                 <!-- previously-featured -->
-                <div class="flex flex-col gap-4 md:gap-8 px-6 lg:px-0 py-14 lg:py-28">
+                <div class="flex flex-col gap-8 px-6 sm:px-2 md:px-8 py-14 lg:py-28">
                     <h2 class="font-bold uppercase">Previously featured on</h2>
                     <div class="flex gap-8 md:gap-16">
                         <svg fill="none" viewBox="0 0 49 48" xmlns="http://www.w3.org/2000/svg" class="w-auto h-12">
@@ -134,8 +134,8 @@
 
         <!-- features -->
         <div class="container mx-auto py-10 -scroll-mt-24" id="features">
-            <div class="flex pl-8 xl:pl-28 pr-8" x-data="{ feature: 1 }">
-                <div class="grid grid-cols-2 justify-center gap-12">
+            <div class="hidden lg:flex pl-16 pr-8 xl:-ml-8 xl:pl-28" x-data="{ feature: 1 }">
+                <div class="grid grid-cols-2 justify-center gap-6">
 
                     <!-- feature images -->
                     <div class="flex items-center">
@@ -175,7 +175,7 @@
 
                         <!-- feature #3 -->
                         <div class="grid gap-4 hover:pl-4 hover:border-l-4 border-brand-50 transition-all duration-300" :class="feature == 3 ? 'border-l-4 border-brand-50 pl-4' : ''" @click="feature = 3">
-                            <h2 class="text-4xl font-bold">Growing library of musics</h2>
+                            <h2 class="text-4xl font-bold">Growing music library</h2>
                             <p class="w-8/10">Vestibulum semper eros nec turpis consequat placerat. Vestibulum dapibus nulla ut est porttitor maximus. Aenean ipsum nulla, lacinia posuere nibh non, aliquam condimentum sapien.</p>
                         </div>
 
