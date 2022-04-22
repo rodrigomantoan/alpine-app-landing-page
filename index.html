@@ -35,6 +35,8 @@
             }
         }
     </script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 
 <body class="bg-brand-900 tracking-wider text-brand-50 overflow-x-hidden">
@@ -132,7 +134,7 @@
 
         <!-- features -->
         <div class="container mx-auto py-10 -scroll-mt-24" id="features">
-            <div class="flex pl-8 xl:pl-28 pr-8">
+            <div class="flex pl-8 xl:pl-28 pr-8" x-data="{ feature: 1 }">
                 <div class="grid grid-cols-2 justify-center gap-12">
 
                     <!-- feature images -->
@@ -142,16 +144,16 @@
                             <img src="img/mobile-frame.png" class="relative z-50 max-h-[700px]">
 
                             <!-- feature #1 -->
-                            <img src="img/feature-1.png" class="absolute -z-10 top-2.5 left-4 rounded-[3rem] max-h-[680px]">
+                            <img src="img/feature-1.png" class="absolute -z-10 top-2.5 left-4 rounded-[3rem] max-h-[680px]" x-show="feature == 1" x-transition:enter="transition transform duration-1000 delay-400" x-transition:enter-start="-translate-y-8 opacity-0" x-transition:enter-end="translate-y-0 opacity-100" x-transition:leave="transition transform duration-1000" x-transition:leave-start="translate-y-0 opacity-100" x-transition:leave-end="-translate-y-8 opacity-0">
 
                             <!-- feature #2 -->
-                            <img src="img/feature-2.png" class="absolute -z-10 top-2.5 left-4 rounded-[3rem] max-h-[680px]">
+                            <img src="img/feature-2.png" class="absolute -z-10 top-2.5 left-4 rounded-[3rem] max-h-[680px]" x-show="feature == 2" x-transition:enter="transition transform duration-1000 delay-400" x-transition:enter-start="-translate-y-8 opacity-0" x-transition:enter-end="translate-y-0 opacity-100" x-transition:leave="transition transform duration-1000" x-transition:leave-start="translate-y-0 opacity-100" x-transition:leave-end="-translate-y-8 opacity-0">
 
                             <!-- feature #3 -->
-                            <img src="img/feature-3.png" class="absolute -z-10 top-2.5 left-4 rounded-[3rem] max-h-[680px]">
+                            <img src="img/feature-3.png" class="absolute -z-10 top-2.5 left-4 rounded-[3rem] max-h-[680px]" x-show="feature == 3" x-transition:enter="transition transform duration-1000 delay-400" x-transition:enter-start="-translate-y-8 opacity-0" x-transition:enter-end="translate-y-0 opacity-100" x-transition:leave="transition transform duration-1000" x-transition:leave-start="translate-y-0 opacity-100" x-transition:leave-end="-translate-y-8 opacity-0">
 
                             <!-- feature #4 -->
-                            <img src="img/feature-4.png" class="absolute -z-10 top-2.5 left-4 rounded-[3rem] max-h-[680px]">
+                            <img src="img/feature-4.png" class="absolute -z-10 top-2.5 left-4 rounded-[3rem] max-h-[680px]" x-show="feature == 4" x-transition:enter="transition transform duration-1000 delay-400" x-transition:enter-start="-translate-y-8 opacity-0" x-transition:enter-end="translate-y-0 opacity-100" x-transition:leave="transition transform duration-1000" x-transition:leave-start="translate-y-0 opacity-100" x-transition:leave-end="-translate-y-8 opacity-0">
                         </div>
                     </div>
                     <!-- endof: feature images -->
@@ -160,25 +162,25 @@
                     <div class="flex flex-col gap-8 px-3 cursor-pointer justify-center">
 
                         <!-- feature #1 -->
-                        <div class="grid gap-4 hover:pl-4 hover:border-l-4 border-brand-50 transition-all duration-300">
+                        <div class="grid gap-4 hover:pl-4 hover:border-l-4 border-brand-50 transition-all duration-300" :class="feature == 1 ? 'border-l-4 border-brand-50 pl-4' : ''" @click="feature = 1">
                             <h2 class="text-4xl font-bold">Sleep stories</h2>
                             <p class="w-8/10">Vestibulum semper eros nec turpis consequat placerat. Vestibulum dapibus nulla ut est porttitor maximus. Aenean ipsum nulla, lacinia posuere nibh non, aliquam condimentum sapien.</p>
                         </div>
 
                         <!-- feature #2 -->
-                        <div class="grid gap-4 hover:pl-4 hover:border-l-4 border-brand-50 transition-all duration-300">
+                        <div class="grid gap-4 hover:pl-4 hover:border-l-4 border-brand-50 transition-all duration-300" :class="feature == 2 ? 'border-l-4 border-brand-50 pl-4' : ''" @click="feature = 2">
                             <h2 class="text-4xl font-bold">Play options</h2>
                             <p class="w-8/10">Vestibulum semper eros nec turpis consequat placerat. Vestibulum dapibus nulla ut est porttitor maximus. Aenean ipsum nulla, lacinia posuere nibh non, aliquam condimentum sapien.</p>
                         </div>
 
                         <!-- feature #3 -->
-                        <div class="grid gap-4 hover:pl-4 hover:border-l-4 border-brand-50 transition-all duration-300">
+                        <div class="grid gap-4 hover:pl-4 hover:border-l-4 border-brand-50 transition-all duration-300" :class="feature == 3 ? 'border-l-4 border-brand-50 pl-4' : ''" @click="feature = 3">
                             <h2 class="text-4xl font-bold">Growing library of musics</h2>
                             <p class="w-8/10">Vestibulum semper eros nec turpis consequat placerat. Vestibulum dapibus nulla ut est porttitor maximus. Aenean ipsum nulla, lacinia posuere nibh non, aliquam condimentum sapien.</p>
                         </div>
 
                         <!-- feature #4 -->
-                        <div class="grid gap-4 hover:pl-4 hover:border-l-4 border-brand-50 transition-all duration-300">
+                        <div class="grid gap-4 hover:pl-4 hover:border-l-4 border-brand-50 transition-all duration-300" :class="feature == 4 ? 'border-l-4 border-brand-50 pl-4' : ''" @click="feature = 4">
                             <h2 class="text-4xl font-bold">Built in audio player</h2>
                             <p class="w-8/10">Vestibulum semper eros nec turpis consequat placerat. Vestibulum dapibus nulla ut est porttitor maximus. Aenean ipsum nulla, lacinia posuere nibh non, aliquam condimentum sapien.</p>
                         </div>
